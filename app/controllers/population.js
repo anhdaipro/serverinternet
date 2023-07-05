@@ -1,10 +1,11 @@
 const mysql = require('mysql2'); // or use import if you use TS
 const util = require('util');
 const connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'containers-us-west-190.railway.app',
+    port:'7024',
     user: 'root',
-    database: 'internet',
-    password: 'anhdai123'
+    database: 'railway',
+    password: '3BN9kKnbv2UwNuUnEPEp'
 });
 const query = util.promisify(connection.query).bind(connection);
 const lCountry = async (req,res,next)=>{
